@@ -1,11 +1,15 @@
 import React from 'react';
-import { Button } from 'reakit'
+import { Button } from 'reakit';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header><Button>Reakit Button</Button></header>
+      <header>
+        <Button onClick={() => console.log('click!')}>
+          Reakit Button
+        </Button>
+      </header>
     </div>
   );
 }
