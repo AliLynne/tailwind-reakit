@@ -3,13 +3,25 @@ import { Button } from 'reakit';
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <a id="skip-nav" href="#main-content" className="sr-only">
+        Skip to Content
+      </a>
       <header>
-        <Button onClick={() => console.log('click!')}>
-          Reakit Button
-        </Button>
+        <h1>Page Title</h1>
+        <nav>
+          <Button onClick={() => console.log('click!')}>
+            Reakit Button
+          </Button>
+        </nav>
       </header>
-    </div>
+      <main id="main-content">
+        <p>Main Content Should Go Here</p>
+      </main>
+      <footer>
+        <p>Footer Content Should Go Here</p>
+      </footer>
+    </>
   );
 }
 
