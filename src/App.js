@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'reakit';
-import './App.css';
 
 function App() {
   return (
