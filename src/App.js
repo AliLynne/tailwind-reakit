@@ -8,7 +8,7 @@ function App() {
   const toolbar = useToolbarState({ loop: true });
 
   return (
-    <div className="container h-screen flex flex-col">
+    <div className="container h-screen flex flex-col bg-white text-black dark:bg-black dark:text-white">
       <a id="skip-nav" href="#main-content" className="sr-only">
         Skip to Content
       </a>
