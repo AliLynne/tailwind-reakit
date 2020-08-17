@@ -1,31 +1,35 @@
 import React from 'react';
-import { Button, Toolbar, ToolbarItem } from 'reakit';
+import { Button, Clickable, Toolbar, ToolbarItem } from 'reakit';
+import { useHistory } from 'react-router-dom';
 
 const Header = ({ title = 'Page Title', toolbar }) => {
+  let history = useHistory();
   return (
     <header className="flex justify-between p-3">
-      <h1>{title}</h1>
-      <Toolbar {...toolbar}>
+      <Clickable as="h1" onClick={() => history.push('/')}>
+        {title}
+      </Clickable>
+      <Toolbar {...toolbar} aria-label="Toolbar">
         <ToolbarItem
-          as={Button}
           className="px-3"
-          onClick={() => alert('click!')}
+          as={Button}
+          onClick={() => history.push('/component1')}
         >
-          Nav Button 1
+          Component 1
         </ToolbarItem>
         <ToolbarItem
-          as={Button}
           className="px-3"
-          onClick={() => alert('click!')}
+          as={Button}
+          onClick={() => history.push('/component2')}
         >
-          Nav Button 2
+          Component 2
         </ToolbarItem>
         <ToolbarItem
-          as={Button}
           className="px-3"
-          onClick={() => alert('click!')}
+          as={Button}
+          onClick={() => history.push('/component3')}
         >
-          Nav Button 3
+          Component 3
         </ToolbarItem>
       </Toolbar>
     </header>

@@ -675,12 +675,12 @@ module.exports = {
     },
     extend: {
       screens: {
-        'dark': {'raw': '(prefers-color-scheme: dark)'},
+        dark: { raw: '(prefers-color-scheme: dark)' },
         // => @media (prefers-color-scheme: dark) { ... },
-        'print': {'raw': 'print'},
+        print: { raw: 'print' },
         // => @media  print { ... }
-      }
-    }
+      },
+    },
   },
   variants: {
     accessibility: ['responsive', 'focus'],
@@ -772,17 +772,22 @@ module.exports = {
     gridRow: ['responsive'],
     gridRowStart: ['responsive'],
     gridRowEnd: ['responsive'],
-    transform: ['responsive'],
+    transform: ['responsive', 'hover', 'focus', 'active'],
     transformOrigin: ['responsive'],
-    scale: ['responsive', 'hover', 'focus'],
+    scale: ['responsive', 'hover', 'focus', 'active'],
     rotate: ['responsive', 'hover', 'focus'],
-    translate: ['responsive', 'hover', 'focus'],
+    translate: ['responsive', 'hover', 'focus', 'active'],
     skew: ['responsive', 'hover', 'focus'],
-    transitionProperty: ['responsive'],
-    transitionTimingFunction: ['responsive'],
-    transitionDuration: ['responsive'],
+    transitionProperty: ['responsive', 'hover', 'focus', 'active'],
+    transitionTimingFunction: [
+      'responsive',
+      'hover',
+      'focus',
+      'active',
+    ],
+    transitionDuration: ['responsive', 'hover', 'focus', 'active'],
     transitionDelay: ['responsive'],
-    animation: ['responsive'],
+    animation: ['responsive', 'hover', 'focus', 'active'],
   },
   corePlugins: {},
   plugins: [],
